@@ -5,10 +5,23 @@
     <title>todolist-v1</title>
   </head>
   <body>
-    <% if(kindOfDay==="sunday"){ %>
-    <h1 style="color:pink">today is <%= kindOfDay%> todolist !</h1>
-    <% } else{ %>
-      <h1 style="color:blue">today is <%= kindOfDay%> todolist !</h1>
-    <% } %>
+    <h1><%= kindOfDay %></h1>
+
+    <ul>
+      <li>jvni</li>
+      <li>favsfavs</li>
+      <li>fsvdvsd</li>
+
+      <%for(int i=0;i<=newListItem.length;i++){%>
+        <li><%= newListItem[i] %></li>
+      <% } %>
+    </ul>
+
+    <form class="" action="/" method="post">
+      <input type="text" name="newItem" value="">
+
+      <button type="submit" name="button">add</button>
+
+    </form>
   </body>
 </html>
