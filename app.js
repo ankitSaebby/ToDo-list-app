@@ -5,10 +5,11 @@ const bodyParser = require ("body-parser");
 
 const app=express();
 app.use(bodyParser.urlencoded({extened:true}));
+app.use(express.static("public"));
 
 app.set("view engine","ejs");
 
-var items=[];
+var items=["buy food","cook food","eat food"];
 
 app.get("/",function(req,res){
   var today=new Date();
@@ -21,7 +22,7 @@ app.get("/",function(req,res){
 
   var day = today.toLocaleDateString("en-US",options);
 
-  res.render("list", {kindOfDay: day , newListItem:items});
+  res.render("list", {kindOfDay: day , newListItems:items});
 });
 
 app.post("/",function(req,res){
