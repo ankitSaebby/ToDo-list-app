@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>todolist-v1</title>
-  </head>
-  <body>
-
+<%- include("header") -%>
     <div class="box" id="heading">
-      <h1><%= kindOfDay %></h1>
+      <h1><%= listItem %></h1>
     </div>
 
     <div class="box" >
@@ -21,11 +13,8 @@
 
         <form class="item" action="/" method="post">
           <input type="text" name="newItem" value="" placeholder="New item" autocomplete="off">
-          <button type="submit" name="button">+</button>
+          <button type="submit" name="list" value=<%= listItem %>>+</button>
         </form>
 
     </div>
-
-
-  </body>
-</html>
+<%- include("footer") -%>
